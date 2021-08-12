@@ -1,2 +1,2 @@
 # leet_code
-leetcode problems
+This file contains the solutions to leetcode problems that i solved.
