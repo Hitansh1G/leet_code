@@ -30,7 +30,7 @@ public:
                     int stind=(j+fl)-tl;
                     if(wc.size()==0)
                         ans.push_back(stind);
-                }
+                 }
                 else{
                     break;
                 }
