@@ -1,44 +1,46 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-bool isPermutationPalindrome(string &s) {
-	unordered_map<char,int>mp;
-	for(int i=0 ; i<s.size() ; i++){
-		mp[s[i]]++;
-	}
-	//count no of odds and no of evens in mp.second
-	//agr saare even then true
-	//agr saare even and 1 odd ha then true
-	//alse false
-	int counteven=0;
-	int countodd=0;
-	for(auto it:mp){
-		if(it.second%2==0){
-			counteven++;
-		}
-		else countodd++;
-	}
-	if(countodd>1){
-		return false;
-	}
-	return true;
+string reverseWordsInAString(string s){
+    
+    int n = s.size();
+        bool flag = true;
+        int i = 0, e = n-1;
+        while(i<e){
+            if(flag && s[i] == ' '){
+                s = s.substr(i+1);
+                i = 0;
+                e--;
+            }
+            else{
+                flag = false;
+                swap(s[i], s[e]);
+                i++;
+                e--;
+            }
+        }
+        e=s.size();
+        int p1 = 0, p2=0;
+        while(p1<e){
+            if(s[p1] == ' '){
+                s = s.erase(p1, 1);
+                e--;
+            }
+            else{
+                while(p2<e && s[p2] != ' ') p2++;
+                reverse(s.begin()+p1, s.begin()+p2);
+                p1 = p2+1;
+                p2 = p1;
+            }            
+        }
+        return s;
 }
 
-int main()
-{
-	int t;
-	cin >> t;
-	while(t--) {
-		string s;
-		cin >> s;
-		bool answer = isPermutationPalindrome(s);
-		if(answer) {
-			cout << "True\n";
-		} else {
-			cout << "False\n";
-		}
-	}
-	return 0;
+
+int main(){
+    string str;
+    getline(cin, str);
+    cout<<reverseWordsInAString(str);
 }
 
 /* 
