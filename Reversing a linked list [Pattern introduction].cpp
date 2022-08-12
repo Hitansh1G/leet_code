@@ -41,7 +41,7 @@ Milestone 2: Finalize approach & execution plan
 1. Understand what type of problem you are solving.
      a. Obvious logic, tests ability to convert logic to code
      b. Figuring out logic
-     c. Knowledge of specific domain or concepts
+     c. Knowledge of specific domain or concepts                                                                                                                                                                                 m
      d. Knowledge of specific algorithm
      e. Mapping real world into abstract concepts/data structures
 2. Brainstorm multiple ways to solve the problem and pick one
