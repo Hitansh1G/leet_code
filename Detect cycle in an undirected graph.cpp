@@ -86,5 +86,5 @@ Milestone 3: Code by expanding your pseudocode
 Milestone 4: Prove to the interviewer that your code works with unit tests
 1. Make sure you check boundary conditions
 2. Time & storage complexity
-3. Suggest optimizations if applicable
+3. Suggest optimizations if applicabl
 */
