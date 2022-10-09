@@ -62,8 +62,7 @@ public:
     string checkTrie(string word){
         string temp="";
         TrieNode* curr=root;
-        for(int i=0;i<word.length();i++)
-        {
+        for(int i=0;i<word.length();i++){
             temp.push_back(word[i]);
             if(curr->child[word[i]-'a']==NULL)
                 return "";
