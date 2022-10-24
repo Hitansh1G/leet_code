@@ -29,7 +29,7 @@ public:
         fun(idx+1,arr,temp,maxlength);
     }
     int maxLength(vector<string>& arr) {
-        vector<string> temp;
+        vector<stringmb > temp;
         int maxlength=0;
         fun(0,arr,temp,maxlength);
         return maxlength;
