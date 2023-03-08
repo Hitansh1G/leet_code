@@ -1,6 +1,5 @@
 class Solution {
 public:
-    int findKthPositive(vector<int>& arr, int sum) {
         arr.push_back(1000000);
         
         int n=arr.size();
