@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int findJudge(int n, vector<vector<int>>& trust) {
+    int findJudge(int n, vector<vector<int> >& trust) {
         vector<int> dp(n+1,0);
         for(int i=0; i<trust.size(); i++){
             dp[trust[i][0]]--;
