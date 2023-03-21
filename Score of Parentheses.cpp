@@ -2,7 +2,7 @@ class Solution {
 public:
     int scoreOfParentheses(string s) {
         stack<int> st;
-        int ind = 0;
+        int ind = 0; 
         for(auto i : s){
             if(i == '('){
                 st.push(ind);
