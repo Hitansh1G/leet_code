@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int sz;
+    bool spaceOptimization(vector<int>& nums){
+        int plus1=1,plus2=0,plus3=0;
+        for(int i=sz-1;i>=0;i--){
+            int curr=0;
+            if(i+1<sz && nums[i]==nums[i+1]){
+                if(plus2)    curr=1;
+            }
+            if(i+2<sz && nums[i]==nums[i+1] && nums[i+1]==nums[i+2]){
+                if(plus3)    curr=1;
+            }
+            if(i+2<sz && nums[i+1]-nums[i]==1 && nums[i+2]-nums[i+1]==1){
+                if(plus3)    curr=1;
+            }
+            plus3=plus2;
+            plus2=plus1;
+            plus1=curr;
+        }
+        return plus1;
+    }
+
+    bool validPartition(vector<int>& nums) {
+        ios::sync_with_stdio(0);cin.tie(NULL);cout.tie(NULL);
+        sz=nums.size();
+        return spaceOptimization(nums);
+    }
+};
