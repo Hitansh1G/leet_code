@@ -3,8 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-//Basic structure of the binary tree that i think is required.
-//i chose to use binary tree as it is given in the question that each person can have either 2 or 1 subordinates 
+//Basic structure of the binary tree . 
 
 struct TreeNode {
     int val;
@@ -86,9 +85,10 @@ public:
     vector<long long> findTotalBonus(vector<long long>& bonus1, vector<long long>& bonus2) {
 
         vector<long long> vec;
+        cout<<"Indivisual nodes that are in the path will have the following distribution of bonus:- "<<endl;
         for (long long i = 0; i < bonus2.size(); i++) {
             
-            // cout << bonus1[i] << ":" << bonus2[i] << endl;
+            cout << bonus1[i] << ":" << bonus2[i] << endl;
             vec.push_back(bonus2[i] + bonus1[i]);
         }
         return vec;
