@@ -19,9 +19,12 @@ struct TreeNode {
 class Solution {
 public:
 
+    //      10
+    //  5        20
+    //3   7   15   25
     //this method is calculating the nodes from root to any endlead whose values give the maximum sum and storing the values of it in a vector named "path"
     long long lineWithHighestSales(TreeNode* root, vector<TreeNode*>& path) {
-        if (root == nullptr) return 0;
+        if (root == NULL) return 0;
         vector<TreeNode*> leftPath, rightPath;
         long long leftSum = lineWithHighestSales(root->left, leftPath);
         long long rightSum = lineWithHighestSales(root->right, rightPath);
@@ -61,6 +64,7 @@ public:
         long long flag = n;
         long long totalSubordinates = (n*(n - 1))/2;
         for (long long i = 0; i < n; i++) {
+            //(indivisual_sub / total_sub) * total_money
             double temp =  ( (double)(flag - 1) / (double)totalSubordinates) * (double)750000;
             bonus1.push_back(temp);
             flag--;
@@ -75,6 +79,8 @@ public:
         vector<long long> bonus2;
         long long n = path.size();
         for (long long i = 0; i < n; i++) {
+            //(indivisual_val / total_val) * total_money
+
             double temp = ( (double)path[i]->val * (double)2250000) / totalSum;
             bonus2.push_back(temp);
         }
